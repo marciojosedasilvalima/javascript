@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            background-color: steelblue;
+        }
+    </style>
+</head>
+<body>
+    <h1 name='nome'>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p id="sel">Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <h2>TESTANDO.COM</h2>
+    <script>
+        // Busca a tag dentro do Html e joga dentro da variável
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write("Esta escrito assim: " + p1.innerText)
+        // Altero a cor do texto que esta na variável
+        p1.style.color = 'blue'
+        // cria a variável corpo com os dados o body e altera a cor do body
+        var corpo = window.document.body
+        //  corpo.style.background = "black"
+
+        var p2 = window.document.getElementsByTagName('p')[1]
+        // mostra somente o texto
+        window.document.write(p2.innerText) 
+        // Mostra o texto e as tags filhas, como por exemplo o negrito<strong>
+        window.document.write(p2.innerHTML)
+        // Pega os dados pelo ID    
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        // Altera o texto do campo da variável do ID    
+        //d.innerText = 'Olá Mundo!'
+
+        // Pega os dados pelo name
+        var n = window.document.getElementsByName('nome')[0]
+       // n.innerText = 'Olá Mundão de Deus'
+
+       // Pega os dados do selecto p = paragráfo e sel do id  
+       var s = window.document.querySelector('p#sel')
+       s.style.color = 'red'    
+    </script>
+</body>
+</html>
