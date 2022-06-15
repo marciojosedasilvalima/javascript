@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">>
+    <title>Eleições 2022</title>
+</head>
+<body>
+    <h1>Verifique sua situação para votar:</h1>
+
+    Digite sua idade: <input type="number" name="nrIdade" id="nrIdade">
+
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="resp"></div>
+
+    <script>
+        function calcular() {
+            var vrIdade = window.document.getElementById(`nrIdade`)
+            var res   = window.document.getElementById(`resp`)
+            var idade = Number(vrIdade.value)
+            
+            res.innerHTML = `Você tem ${idade} anos.`
+
+            if (idade < 16) {
+                res.innerHTML += `<p>Não vota.</p>`
+            } else if (idade < 18 || idade > 65) {
+                res.innerHTML += `<p>Voto Opcional.</p>`
+            }  else {
+                res.innerHTML += `<p>Voto Obrigatório.</p>`
+            }
+        }
+    </script>
+    
+</body>
+</html>
