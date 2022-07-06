@@ -1,6 +1,6 @@
 var agora = new Date()
 var diaSem = agora.getDay()
-var diaSem = 8
+var diaSem = 2
 switch(diaSem) {
     case 0:
         console.log(`Domingo`)
