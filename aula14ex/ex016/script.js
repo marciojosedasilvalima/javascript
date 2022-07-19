@@ -4,7 +4,10 @@ function contar() {
     var passo = document.getElementById('numpasso')
 }
 
-if (ini == '' !! fim == '') {
-    
+if (ini == '') {  
+    window.alert('Verifique os dados e tente novamente!') 
 }
 
+if (fim == '') {
+    
+}
