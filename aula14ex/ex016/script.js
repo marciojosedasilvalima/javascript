@@ -4,24 +4,25 @@ function contar() {
     var passo = document.getElementById('numpasso') 
     var resp  = document.querySelector('div#resp')   
 
-    if (ini.value == '') {  
+    
+    if (ini.value.length == 0) {  
         resp.innerHTML = 'Impossível contar, Início deve ser preenchido.'
-    } else if  (fim.value.length == 0 || fim.value.length == '') { 
+    } else if  (fim.value.length == 0) { 
         resp.innerHTML = 'Impossível contar, Fim deve ser preenchido.'
     } else if (ini.value > fim.value) {
         resp.innerHTML = 'Início não pode ser maior que o fim.'
     } else {
-        if (passo.value.length == 0 || passo.value.length == '') { 
-         window.alert('Passo inválido! Considerando PASSO 1.')        
-         passo.value = 1
+        if (passo.value.length == 0) { 
+            window.alert('Passo inválido! Considerando PASSO 1.')        
+            passo.value = 1
         } 
 
-        var c = ini
-        var p = passo
-        var y = fim
- 
+        resp.innerHTML = 'Teste'
+        
+ /*
         for(c.value; c.value <= y.value; c.value = Number(c.value) + Number(p.value)) {
             resp.innerHTML = c.value            
         }                
-    }        
+   */ 
+    } 
 }
